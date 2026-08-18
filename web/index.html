@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F2F2F7" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Palpi" />
+    <title>Palpi — Задачи</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="Приложение Palpi">
+        <div class="dynamic-island" aria-hidden="true"></div>
+        <div class="app">
+          <header class="status-bar">
+            <span id="clock">09:41</span>
+            <span aria-hidden="true">LTE</span>
+          </header>
+          <div class="header">
+            <h1>Задачи</h1>
+          </div>
+          <div class="filters" role="tablist" aria-label="Фильтр задач">
+            <button type="button" data-filter="all" aria-pressed="true">Все</button>
+            <button type="button" data-filter="active" aria-pressed="false">Активные</button>
+            <button type="button" data-filter="done" aria-pressed="false">Готово</button>
+          </div>
+          <div class="list-wrap">
+            <div id="empty-state" class="empty"></div>
+            <div id="task-list" class="card" hidden></div>
+            <p id="remaining-note" class="footer-note" hidden></p>
+          </div>
+          <form id="add-form" class="add-bar">
+            <input id="task-input" type="text" placeholder="Новая задача" autocomplete="off" />
+            <button id="add-button" type="submit" aria-label="Добавить задачу" disabled>+</button>
+          </form>
+          <div class="home-indicator" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

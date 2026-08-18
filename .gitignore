@@ -3,3 +3,9 @@
 .env.*
 node_modules/
 .cursor/
+xcuserdata/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
